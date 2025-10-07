@@ -1,0 +1,32 @@
+:root {
+  --bg-dark: #020025;
+  --bg-dark-alt: #0A0430;
+  --text-light: #E6E9FF;
+  --text-muted: #9AA0C6;
+  --accent-electric: #5E4BFF;
+  --accent-electric-dark: #3C2EBE;
+  --accent-glow: #8A7CFF;
+  --accent-cyan: #00E0FF;
+  --accent-magenta: #FF47C2;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --card-bg: #0C0845;
+  --shadow-color: rgba(0, 0, 0, 0.6);
+}
+
+
+
+body { margin:0; font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
+
+
+main section {
+  height: 100vh;
+  scroll-margin-top: 70px; /* avoid navbar covering content */
+}
+
+#projects section {
+  padding: 0 120px;
+}
+
+/* small global helpers */
+.section-title{ font-weight:700; margin-bottom:1rem; }
+

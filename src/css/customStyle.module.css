@@ -1,0 +1,175 @@
+/* ===================
+   Projects Section (Electric Cosmic Theme)
+   =================== */
+
+.cardRoot {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  height: 280px;
+  display: flex;
+  align-items: flex-end;
+  background-color: var(--bg-dark-alt);
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.4s ease;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.4);
+}
+
+/* Hover interaction */
+.cardRoot:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px rgba(0, 224, 255, 0.2),
+              0 0 40px rgba(255, 71, 194, 0.1);
+  border-color: var(--accent-cyan);
+}
+
+/* Subtle animated overlay */
+.cardOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 30, 0.1) 0%,
+    rgba(2, 0, 37, 0.7) 70%
+  );
+  transition: background 0.4s ease;
+  z-index: 1;
+}
+
+.cardRoot:hover .cardOverlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(94, 75, 255, 0.2),
+    rgba(255, 71, 194, 0.4)
+  );
+}
+
+/* Card text */
+.cardRoot h5,
+.cardRoot p,
+.cardRoot .tag,
+.cardRoot button {
+  position: relative;
+  z-index: 2;
+}
+
+/* Title */
+.cardRoot h5 {
+  font-weight: 600;
+  color: var(--text-light);
+  text-shadow: 0 0 10px rgba(94, 75, 255, 0.3);
+}
+
+/* Description */
+.cardRoot p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Tag styling */
+.tag {
+  display: inline-block;
+  background: linear-gradient(90deg, var(--accent-cyan), var(--accent-magenta));
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.7rem;
+  border-radius: 14px;
+  margin-right: 0.3rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 10px var(--accent-glow);
+}
+
+/* View Button */
+.cardRoot button {
+  background: linear-gradient(90deg, var(--accent-electric), var(--accent-cyan));
+  border: none;
+  border-radius: 20px;
+  padding: 0.4rem 1rem;
+  color: #fff;
+  font-weight: 600;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cardRoot button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 12px var(--accent-cyan);
+}
+
+/* Modal Backdrop */
+.modalBackdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 0, 37, 0.9);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050;
+  animation: fadeIn 0.4s ease;
+}
+
+/* Modal Content */
+.modalContent {
+  position: relative;
+  background: var(--bg-dark-alt);
+  padding: 1.2rem;
+  border-radius: 14px;
+  max-width: 800px;
+  width: 90%;
+  box-shadow: 0 0 30px rgba(138, 124, 255, 0.3),
+              0 0 60px rgba(0, 224, 255, 0.15);
+  animation: scaleIn 0.4s ease;
+  border: 1px solid var(--accent-glow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Modal image */
+.modalContent img {
+  width: 100%;
+  height: auto;
+  max-height: 80vh; /* 👈 prevent it from being too tall */
+  object-fit: contain; /* 👈 keeps aspect ratio */
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(0, 224, 255, 0.25);
+}
+
+/* Modal Close */
+.modalClose {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  background: transparent;
+  border: none;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--accent-cyan);
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.2s ease;
+  z-index: 2;
+}
+
+.modalClose:hover {
+  color: var(--accent-magenta);
+  transform: scale(1.1);
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.9); opacity: 0 }
+  to { transform: scale(1); opacity: 1 }
+}
